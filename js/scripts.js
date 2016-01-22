@@ -16,7 +16,7 @@ var pingPong = function(number) {
   var pong = "pong";
   var number1 = 3;
   var number2 = 5;
-  var output = [];
+  var output = [];  // array that will hold all the numbers and 'ping pongs'
 
   for (var i = 1; i <= number; i++) {
     if (i % number1 === 0 && i % number2 === 0) {
@@ -34,14 +34,14 @@ var pingPong = function(number) {
 
 // Negative Numbers
 var negativeNumber = function(number) {
-  var ping = "ping";
+  var ping = "ping";   // Not DRY, because I'm too stupid to handle negative entries
   var pong = "pong";
   var number1 = 3;
   var number2 = 5;
   var negativeOutput = [];
 
   if (number < 0) {
-    for (var i = -1; i >= number; i--) {
+    for (var i = -1; i >= number; i--) {  // decrimenting when entry is < 0
       if (i % number1 === 0 && i % number2 === 0) {
         negativeOutput.push(ping + pong);
       } else if (i % number1 === 0) {
@@ -53,15 +53,36 @@ var negativeNumber = function(number) {
       }
     }
   }
-console.log(negativeOutput);
   return negativeOutput;
 };  // negativeNumber
 
-
-
-
-
-
-
+// -----------------------------------------
 
 // User Interface Logic
+$(document).ready(function() {
+  $("form.count").submit(function(event) {
+    var userInput = parseInt($("input.userInput").val());
+
+    //...TO BE CONTINUED
+
+    event.preventDefault();
+  });
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
